@@ -7,7 +7,7 @@ spring:
         - id: task-service-route
           uri: http://localhost:8081
           predicates:
-            - Path=/api/tasks/**
+            - Path=/api/v1/order/**
           filters:
             - AddRequestHeader=X-Gateway-Trace, API-Gateway
         - id: another-service-route

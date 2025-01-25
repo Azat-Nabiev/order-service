@@ -20,6 +20,16 @@ repositories {
 }
 
 dependencies {
+
+
+    // OpenTelemetry for tracing
+    implementation("io.opentelemetry:opentelemetry-api")
+    implementation("io.opentelemetry:opentelemetry-sdk")
+    implementation("io.opentelemetry:opentelemetry-exporter-otlp")
+    implementation("io.opentelemetry:opentelemetry-exporter-jaeger:1.29.0")
+    implementation("io.opentelemetry:opentelemetry-extension-trace-propagators")
+
+    // Spring Boot config
     implementation("org.springframework.boot:spring-boot-starter")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.springframework.boot:spring-boot-starter-web")

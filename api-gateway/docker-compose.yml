@@ -10,3 +10,19 @@ services:
       - "16686:16686"
       - "4317:4317"
     restart: unless-stopped
+
+  postgres:
+    image: postgres:15
+    container_name: postgres
+    environment:
+      POSTGRES_USER: anabiev
+      POSTGRES_PASSWORD: qwerty007
+      POSTGRES_DB: ktln_order
+    ports:
+      - "5433:5432"
+    restart: unless-stopped
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
